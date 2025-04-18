@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>個人網站</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', 'Microsoft JhengHei', sans-serif;
+      background: url('pinkbackground.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      position: relative;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 800px;
+      width: 100%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .photo {
+      flex: 1 1 200px;
+    }
+
+    .photo img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .info {
+      flex: 2 1 400px;
+    }
+
+    .info h1 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .home-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #333;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .home-button:hover {
+      background-color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .photo img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="home-button">回到首頁</a>
+
+  <div class="card">
+    <div class="photo">
+      <img src="selfie.jpg" alt="個人照片" />
+    </div>
+    <div class="info">
+      <h1>姓名：劉伊宸</h1>
+      <h1>系級：資管二A</h1>
+      <h1>學號：411211197</h1>
+      <h1>信箱：emilyliu0227@gmail.com</h1>
+      <h1>興趣：聽音樂、追劇</h1>
+      <h1>專長：創意發想，積極提供意見</h1>
+      <h1>參賽經驗：永續智慧創新黑客松競賽2024-第三名</h1>
+    </div>
+  </div>
+</body>
+</html>
