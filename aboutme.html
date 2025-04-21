@@ -21,7 +21,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 40px;
+      padding: 100px 40px 40px; /* 加上 padding-top 保留空間 */
       position: relative;
     }
 
@@ -71,6 +71,7 @@
       font-size: 16px;
       cursor: pointer;
       text-decoration: none;
+      z-index: 999; /* 確保按鈕在最上層 */
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
@@ -86,6 +87,15 @@
 
       .photo img {
         max-width: 100%;
+      }
+
+      .info h1 {
+        font-size: 18px;
+      }
+
+      .home-button {
+        font-size: 14px;
+        padding: 8px 16px;
       }
     }
   </style>

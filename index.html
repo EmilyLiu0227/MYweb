@@ -18,7 +18,7 @@
       background-size: cover;
       min-height: 100vh;
       color: #333;
-      padding: 20px;
+      padding: 100px 20px 20px; /* 上方 padding 增加避免按鈕被蓋住 */
     }
 
     .menu-toggle {
@@ -47,6 +47,7 @@
       display: none;
       flex-direction: column;
       gap: 10px;
+      z-index: 999;
     }
 
     .sidebar.show {
@@ -66,7 +67,7 @@
       padding: 40px;
       border-radius: 20px;
       max-width: 600px;
-      margin: 100px auto 0;
+      margin: 120px auto 0; /* 增加 margin-top 避開按鈕與選單 */
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
@@ -85,7 +86,16 @@
     @media (max-width: 600px) {
       .content-box {
         padding: 20px;
-        margin-top: 120px;
+        margin-top: 140px; /* 行動裝置也保留更多上方空間 */
+      }
+
+      .menu-toggle {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+
+      .sidebar a {
+        font-size: 14px;
       }
     }
   </style>
@@ -94,11 +104,9 @@
   <button class="menu-toggle" onclick="toggleMenu()">MENU</button>
   <div class="sidebar" id="sidebar">
     <a href="aboutme.html">個人簡介</a>
-    <a href="hrm.html">我的何倫碼</a>
-    <a href="win.html">求職履歷</a>
-    
+    <a href="hrm.html">興趣何倫碼測驗結果</a>
+    <a href="win.html">MIS工作</a>
   </div>
-  
 
   <div class="content-box">
     <h1>大家好，歡迎來到我的個人網站</h1>
